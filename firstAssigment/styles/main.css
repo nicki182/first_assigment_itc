@@ -1,0 +1,181 @@
+/*Font imports*/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&family=Poppins:wght@500&display=swap");
+/*Variables*/
+:root {
+    --textHeaderFamily: "Open Sans", sans-serif;
+    --headerSize: 1.125rem;
+    --blue: #109cf1;
+    --grey: #e5e5e5;
+    --white: #ffff;
+    --lightGrey: #ebeff2;
+    --cardShadow: 6px 0px 18px rgba(0, 0, 0, 0.06);
+    --black: #192a3e;
+    --nameTextFamily: "Poppins", sans-serif;
+    --nameSize: 0.875rem;
+    --smallSize: 0.6875rem;
+    --darkGrey: #90a0b7;
+    --accentBlue: #109cf1;
+    --darkBlue: #334d6e;
+}
+* {
+    margin: 0;
+}
+body {
+    height: 100%;
+    width: 100%;
+    background-color: var(--grey);
+    overflow: hidden;
+}
+
+/*Main container*/
+/*Layout of page in grid-template-areas*/
+.container {
+    display: grid;
+    grid-template-areas:
+        "a b b"
+        "a c c"
+        "a c c";
+    row-gap: 2.25rem;
+    grid-template-rows: 3.75rem calc(50vh - 1.875rem) calc(50vh - 1.875rem);
+    grid-template-columns: 16rem calc(50vw - 8rem) calc(50vw - 8rem);
+}
+
+/*------------------------------------------------------*/
+
+/*Navigarion*/
+.navBar {
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    background-color: var(--white);
+    grid-area: a;
+    box-shadow: var(--cardShadow);
+}
+.headerNav {
+    font-family: var(--textHeaderFamily);
+    font-size: var(--headerSize);
+    color: var(--blue);
+    height: 3.75rem;
+    width: 100%;
+}
+.line {
+    border: var(--lightGrey) 1px solid;
+}
+.avatarContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 7rem;
+}
+.nameContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--nameTextFamily);
+}
+.name {
+    font-size: var(--nameSize);
+    font-weight: 500;
+    color: var(--black);
+}
+.email {
+    font-size: var(--smallSize);
+    font-weight: 500;
+    color: var(--darkGrey);
+}
+.navLink {
+    display: flex;
+    column-gap: 16.5px;
+}
+.textNav {
+    color: var(--darkBlue);
+    font-family: var(--nameTextFamily);
+}
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1.0625rem 1.5rem 0 1.5rem;
+    height: 100%;
+}
+.nameContainer {
+    display: flex;
+    flex-direction: column;
+    margin: 1.0625rem 1.5rem 0 1.5rem;
+}
+.navigation {
+    display: flex;
+    row-gap: 1.5rem;
+    flex-direction: column;
+}
+.navFooter {
+    margin-top: auto;
+    font-size: var(--smallSize) !important;
+    color: var(--darkGrey) !important;
+}
+
+/*------------------------------------------------------*/
+
+/*Search bar*/
+.search {
+    overflow: hidden;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.75rem;
+    grid-area: b;
+    background-color: var(--white);
+    padding-left: 2.4063rem;
+}
+
+.inputSearch {
+    border: none;
+    margin-left: 0.9331rem;
+    height: 3.75rem;
+    width: 100%;
+}
+.inputSearch:focus{
+    outline: none;
+}
+/*------------------------------------------------------*/
+
+/*Cards section*/
+.containerCards {
+    overflow: hidden;
+    display: grid;
+    grid-template-areas:
+        "a1 b2 "
+        "a1 c2";
+    column-gap:2.25rem ; 
+    row-gap: 2.25rem; 
+    padding: 0 2.25rem 0 2.25rem;  
+    grid-template-rows: auto;
+    grid-template-columns: minmax(23.4375rem, 1.5fr) minmax(23.4375rem, 1fr);
+    grid-area: c;
+}
+.tasksContainer{
+    height: 100%;
+    width: 100%;
+    grid-area: a1;
+    background-color: var(--white);
+    font-family: var(--nameTextFamily);
+    box-shadow: var(--cardShadow);
+}
+.tasks{
+    margin: 1rem 1.5rem 0.875rem 1.5rem;
+    height: 100%;
+    width: 100%;
+}
+.graphContainer{
+    box-shadow: var(--cardShadow);
+    height: 100%;
+    width: 100%;
+    background-color: var(--white);
+    font-family: var(--nameTextFamily);
+}
+.graphContainer1{
+    grid-area: b2;
+}
+.graphContainer2{
+    grid-area: c2;
+}
