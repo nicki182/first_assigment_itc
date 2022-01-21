@@ -46,7 +46,8 @@
                         <div class="textNav"> Deals</div>
                     </div>
                 </div>
-                <div class="navLink" style="margin-top: 3.0625rem;"> <img src="./assets/settings_icon.svg" />
+                <hr  class="line" style="margin-top: 1.5rem; margin-bottom: 1.5rem;"/>
+                <div class="navLink"> <img src="./assets/settings_icon.svg" />
                     <div class="textNav"> Settings</div>
                 </div>
                 <div class="navLink navFooter"> <img src="./assets/toogle_icon.svg" />
@@ -57,15 +58,122 @@
         <div class="search">
             <img style="background-color: white;" src="./assets/search_icon.svg"/>
             <input class="inputSearch" placeholder="Global Search" />
+            <img style="background-color: white;" src="./assets/notifications_icon.svg"/>
         </div>
         <div class="containerCards">
-            <div class="tasksContainer">
+            <div class="tasksContainer cards">
                 <div class="tasks">
-                    
+                     <div class="headerCalendar">
+                         <h2 >8 task completed out of 10</h2>
+                         <p >Show:<span style="color: var(--accentBlue);">This week</span></p>
+                     </div>
+                     <div class="progressBar" style="margin-top: 1rem; margin-bottom: 1.25rem;">
+                         <div class="progressDone"> </div>
+                     </div>
+                     <h1 class="date">23 December, Sunday</h1>
+                     <div class="calendar">
+                        <div class="day"> <p>Sun</p> <p class="dayText"> 23</p> </div>
+                        <div class="day"> <p style="color: var(--accentBlue);">Mon</p> <p style="color: var(--accentBlue);">24</p> </div>
+                        <div class="day"> <p>Tue</p> <p class="dayText">25</p> </div>
+                        <div class="day"> <p>Wed</p> <p class="dayText">26</p> </div>
+                        <div class="day"> <p>Thu</p> <p class="dayText">27</p> </div>
+                        <div class="day"> <p>Fri</p> <p class="dayText">28</p> </div>
+                        <div class="day"> <p>Sat</p> <p class="dayText">29</p> </div>
+                     </div>
+                     <hr class="line"/>
+                     <div class="tasksCardsContainer">
+                     <div class="taskCard">
+                         <div style="margin: 1rem;">
+                         <div class="headerCard">
+                         <h1>Send benefit review by Sunday</h1>
+                         <p>Reminder</p></div>
+                         <p class="dueDate">Due date:<span style="color:var(--darkGreyText) ;">December 23, 2018</span></p>
+                         <div class="avatarContainerTaskCard">
+                             <div class="avatarCardContainer">
+                            <img src="./assets/task_card_1_avatar.svg" alt="avatar" />
+                                <p class="nameTaskCard">George Fields </p></div>
+                            <button class="buttonTaskCards completedButton" type="submit">Completed</button>
+                        </div>   
+                     </div>
+                </div> 
+                
+                <div class="taskCard">
+                    <div style="margin: 1rem;">
+                    <div class="headerCard">
+                    <h1>Invite to office meet-up</h1>
+                    <p>Call</p></div>
+                    <p class="dueDate">Due date:<span style="color:var(--darkGreyText) ;">December 23, 2018</span></p>
+                    <div class="avatarContainerTaskCard">
+                        <div class="avatarCardContainer">
+                       <img src="./assets/task_card_2_avatar.svg" alt="avatar" />
+                           <p class="nameTaskCard">Rebecca Moore</p></div>
+                      <div class="actionsContainer">
+                          <div class="iconsContainer">
+                       <img style="cursor: pointer;" src="./assets/delete.svg" alt="delete" />
+                       <img style="cursor: pointer;" src="./assets/edit.svg" alt="edit" /></div>
+                       <button class="buttonTaskCards endedButton" type="submit">Ended</button>
+                        </div>
+                   </div>   
                 </div>
+           </div> 
+           <div class="taskCard">
+            <div style="margin: 1rem;">
+            <div class="headerCard">
+            <h1>Office meet-up</h1>
+            <p>Event</p></div>
+            <p class="dueDate">Due date:<span style="color:var(--darkGreyText) ;">December 23, 2018</span></p>
+            <div class="avatarContainerTaskCard">
+                <div class="avatarCardContainer">
+               <img src="./assets/task_card_3_avatar.svg" alt="avatar" />
+                   <p class="nameTaskCard">Lindsey Stroud </p></div>
+               <button class="buttonTaskCards completedButton" type="submit">Completed</button>
+           </div>   
+        </div></div>
+        <div class="showMoreContainer">
+            <p class="showMore">Show more</p>
+        </div>
+   </div> 
+        </div>
             </div>
-            <div class="graphContainer graphContainer1"></div>
-            <div class="graphContainer graphContainer2"></div>
+            <div class="graphContainer1 cards">
+                <div style="margin:1rem;" class="headerCalendar">
+                    <h2 >Deals</h2>
+                    <p >Show:<span style="color: var(--accentBlue);">Monthly</span></p>
+                </div>
+                <div style="display: flex; margin-left: 1rem; align-items: center;">
+                <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4" cy="4" r="3" stroke="#109CF1" stroke-width="2"/>
+                    </svg>
+                    <p class="closedDeals">Closed deals </p> </div>                   
+                <img height="90%" width="90%" src="./assets/deals_graph.svg" />
+            </div>
+            <div class="cards graphContainer2">
+                <div style="margin:1rem;" class="headerCalendar">
+                    <h2 >Today</h2>
+                    <p >Show:<span style="color: var(--accentBlue);">This month</span></p>
+                </div>
+                <div style="display: flex; justify-content: center; align-items: center;column-gap: 1rem; ">
+                <img height=50%" width="50%" src="./assets/tasks_graph.svg" />
+                <div class="graphStatusContainer">
+                    <div class="statusContainer">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="3" stroke="#FFB946" stroke-width="2"/>
+                        </svg> <p class="closedDeals">Active</p> </div>                       
+                
+                <div class="statusContainer">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="3" stroke="var(--green)" stroke-width="2"/>
+                        </svg> <p class="closedDeals">Completed</p> </div>                       
+                <div class="statusContainer">
+                    <svg width="8" height="8" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4" cy="4" r="3" stroke="#f7685b" stroke-width="2"/>
+                        </svg> <p class="closedDeals">Ended</p> </div>                       
+                </div></div>
+            </div>
+                
+                </div>
+                
+            </div>
         </div>
     </div>
 </body>
